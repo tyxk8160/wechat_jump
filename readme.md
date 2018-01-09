@@ -28,7 +28,8 @@ cv2.imwrite("detect_chess.png",test_imge)
 plt.imshow(test_imge)
 plt.show()
 ```
-<span><img src = "chess.png"><img src = "img/detect_chess.png"></span>
+<img src = "chess.png">
+<img src = "img/detect_chess.png">
 
 * 下一个物体中心的识别
 识别思路很简单：直接将图片进行边缘检测，边缘检测后得到二值图片。考虑到这些物体的中心大多是最长一行的中点，所以我直接寻找最长的一行，并求出它的中心，把这当物体中心。
@@ -41,8 +42,8 @@ edges = cv2.Canny(image,50,150)
 物体中心识别，直接贴图：
 
 ---
-<div style = "float:left"><img src="detect/dect_0.png">
-<img src="detect/dect_40.png"></div>
+<img src="detect/dect_0.png">
+<img src="detect/dect_40.png">
 总体上看，识别效果还不错
 
 # 安装
