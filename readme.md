@@ -28,8 +28,8 @@ cv2.imwrite("detect_chess.png",test_imge)
 plt.imshow(test_imge)
 plt.show()
 ```
-<img src = "chess.png">
-<img src = "img/detect_chess.png">
+<img src = "https://github.com/tyxk8160/wechat_jump/raw/master/chess.png">
+<img src = "https://github.com/tyxk8160/wechat_jump/raw/master/img/detect_chess.png">
 
 * 下一个物体中心的识别
 识别思路很简单：直接将图片进行边缘检测，边缘检测后得到二值图片。考虑到这些物体的中心大多是最长一行的中点，所以我直接寻找最长的一行，并求出它的中心，把这当物体中心。
@@ -37,13 +37,13 @@ plt.show()
 ```python
 edges = cv2.Canny(image,50,150)
 ```
-<img src="img/cany_sample.png">
+<img src="https://github.com/tyxk8160/wechat_jump/raw/master/img/cany_sample.png">
 从结果上看,canny检测效果不错，不过那小人似乎对最长的一行检测有干扰。由于模板匹配可以得到小人的精确位置，所以再做边缘检测后，我直接将小人的那一部分区域标记为黑色，这样就不影响结果了。
 物体中心识别，直接贴图：
 
 ---
-<img src="detect/dect_0.png">
-<img src="detect/dect_40.png">
+<img src="https://github.com/tyxk8160/wechat_jump/raw/master/detect/dect_0.png">
+<img src="https://github.com/tyxk8160/wechat_jump/raw/master/detect/dect_40.png">
 总体上看，识别效果还不错
 
 # 安装
